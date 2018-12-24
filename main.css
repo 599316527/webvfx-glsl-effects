@@ -1,0 +1,34 @@
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.canvas-size input {
+    width: 40px;
+}
+
+.choose-images input {
+    width: 100px;
+}
+
+.canvas {
+    margin: 50px auto;
+}
+.canvas .canvas-control {
+    margin: 20px 0;
+    display: flex;
+}
+.canvas .canvas-control input[type="range"] {
+    margin: 0 10px;
+    flex: 1;
+}
+.canvas .canvas-control input[type="number"] {
+    width: 20px;
+}
+
+.canvas canvas {
+    margin: 20px auto;
+    display: block;
+    border: 1px solid red;
+}

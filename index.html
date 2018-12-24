@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Webvfx GLSL Effects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <h1>Webvfx GLSL Effects</h1>
+    <div class="controls">
+        <div>
+            转场
+            <select id="transition-name"></select>
+        </div>
+        <div class="canvas-size">
+            <input type="number" id="canvas-width" min="1" value="800" > x
+            <input type="number" id="canvas-height" min="1" value="600" >
+        </div>
+        <div class="choose-images">
+            从 <input type="file" data-placeholder="images/a.jpg" id="from-image" >
+            至 <input type="file" data-placeholder="images/b.jpg" id="to-image" >
+        </div>
+        <button onclick="updateShader()">Make</button>
+    </div>
+    <div class="canvas">
+        <div class="canvas-control">
+            <button id="canvas-play-btn">Play</button>
+            <input type="range" value="0" min="0" max="100" id="progress">
+            <input type="number" value="2" min="1" id="canvas-duration">秒
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="scripts/shaderkit.js"></script>
+    <script src="scripts/easing.js"></script>
+    <script src="https://code.bdstatic.com/npm/zepto@1.2.0/dist/zepto.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
