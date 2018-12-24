@@ -140,5 +140,10 @@ $('#canvas-play-btn').on('click', function () {
 });
 
 
-
+$('#view-glsl-code-btn').on('click', function () {
+    let transition = transitions[$transitionNameSelect.val()];
+    let win = window.open('', 'newWindow');
+    win.document.title = transition.name;
+    win.document.body.innerHTML = '<pre>' + transition.glsl + '</pre>';
+})
 

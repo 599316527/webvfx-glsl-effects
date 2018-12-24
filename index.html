@@ -11,16 +11,17 @@
     <h1>Webvfx GLSL Effects</h1>
     <div class="controls">
         <div>
-            转场
+            Transition
             <select id="transition-name"></select>
+            <button id="view-glsl-code-btn">view</button>
         </div>
         <div class="canvas-size">
             <input type="number" id="canvas-width" min="1" value="800" > x
             <input type="number" id="canvas-height" min="1" value="600" >
         </div>
         <div class="choose-images">
-            从 <input type="file" data-placeholder="images/a.jpg" id="from-image" >
-            至 <input type="file" data-placeholder="images/b.jpg" id="to-image" >
+            From <input type="file" data-placeholder="images/a.jpg" id="from-image" >
+            To <input type="file" data-placeholder="images/b.jpg" id="to-image" >
         </div>
         <button onclick="updateShader()">Make</button>
     </div>
@@ -28,7 +29,7 @@
         <div class="canvas-control">
             <button id="canvas-play-btn">Play</button>
             <input type="range" value="0" min="0" max="100" id="progress">
-            <input type="number" value="2" min="1" id="canvas-duration">秒
+            <input type="number" value="2" min="1" id="canvas-duration">Sec
         </div>
         <canvas id="canvas"></canvas>
     </div>
